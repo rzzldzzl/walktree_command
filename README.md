@@ -15,7 +15,8 @@ Ruben,Matt
 Ploy,Marwa
 Marwa,Adam
 Joe,Roger
- 
+```
+```
 $ splunk search '| inputlookup org_sample.csv | walktree "Boss" "Employee"'
 children parent
 -------- ------
@@ -37,7 +38,8 @@ Sidney
 Ploy     Marwa
  
 Joe      Roger
- 
+```
+```
 $ splunk search '| inputlookup org_sample.csv.csv | walktree "Boss" "Employee" | search parent="Matt" | mvexpand children | fields children'
 children
 --------
