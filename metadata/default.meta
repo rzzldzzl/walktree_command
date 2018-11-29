@@ -1,0 +1,7 @@
+[commands/walktree]
+access = read : [ * ], write : [ admin ]
+export = system
+
+[lookups/org_sample.csv]
+access = read : [ * ], write : [ admin ]
+export = system
