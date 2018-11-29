@@ -4,6 +4,16 @@ Usage: | walktree \<parent field\> \<child field\>
 Outputs child mv field per parent.
 
 Example:
+- Adam
+  - Matt
+    - Bill
+      - Geoff
+      - Sidney
+    - Ruben
+  - Marwa
+    - Ploy
+- Roger
+  - Joe
 ```
 $ cat org_sample.csv
 Employee,Boss
@@ -16,16 +26,6 @@ Ploy,Marwa
 Marwa,Adam
 Joe,Roger
 ```
-- Adam
-  - Matt
-    - Bill
-      - Geoff
-      - Sidney
-    - Ruben
-  - Marwa
-    - Ploy
-- Roger
-  - Joe
 ```
 $ splunk search '| inputlookup org_sample.csv | walktree "Boss" "Employee"'
 children parent
