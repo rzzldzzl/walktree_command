@@ -16,6 +16,16 @@ Ploy,Marwa
 Marwa,Adam
 Joe,Roger
 ```
+- Adam
+  - Matt
+    - Bill
+      - Geoff
+      - Sidney
+    - Ruben
+  - Marwa
+    - Ploy
+- Roger
+  - Joe
 ```
 $ splunk search '| inputlookup org_sample.csv | walktree "Boss" "Employee"'
 children parent
