@@ -50,7 +50,7 @@ Ploy     Marwa
 Joe      Roger
 ```
 ```
-$ splunk search '| inputlookup org_sample.csv.csv | walktree "Boss" "Employee" | search parent="Matt" | mvexpand children | fields children'
+$ splunk search '| inputlookup org_sample.csv | walktree "Boss" "Employee" | search parent="Matt" | mvexpand children | fields children'
 children
 --------
 Bill
